@@ -10,3 +10,5 @@ export default function NotFound() {
     </div>
   );
 }
+
+// Note: add me later while dealing product that does not exists and handling that error. while showing the priority of error page over not found when error page is closer than not found.
