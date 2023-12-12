@@ -8,7 +8,13 @@ export default function ProductItem({ product }) {
     <div className='col-md-4 mb-4'>
       <Link href={`/products/${product.id}`} className={styles.productLink}>
         <div className='card bg-dark'>
-          <Image src={product.imageUrl} width={300} height={200} className='card-img-top' alt={product.name} />
+          <Image
+            src={product.imageUrl}
+            width={325}
+            height={429}
+            className={classNames('card-img-top')}
+            alt={product.name}
+          />
 
           <div className={classNames('card-body')}>
             <h5 className='card-title'>{product.name}</h5>

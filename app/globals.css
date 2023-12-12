@@ -20,3 +20,7 @@ body {
 .active {
   border-bottom: 2px solid #fff;
 }
+
+.fancy {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}

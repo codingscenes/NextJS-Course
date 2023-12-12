@@ -16,3 +16,8 @@
   color: #5ccacd;
   text-decoration: none;
 }
+
+.image {
+  width: 100%;
+  height: fit-content;
+}
