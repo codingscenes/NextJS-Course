@@ -3,60 +3,44 @@ import Link from 'next/link';
 
 const posts = [
   {
-    id: 'p1',
-    place: 'Taj Mahal, Agra',
-    thoughts: 'An ivory-white marble mausoleum on the right bank of the Yamuna river.',
-    photos: [
-      'https://images.unsplash.com/photo-1593407581005-8ec9fcae7b4a?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1587135941948-670b381f08ce?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1592635196078-9fdc757f27f4?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    ],
-    tips: "Visit early in the morning to avoid crowds. Don't forget to take your camera for amazing shots.",
+    userId: 1,
+    destinationId: 1,
+    title: 'Taj Mahal, Agra',
+    content:
+      "An ivory-white marble mausoleum on the right bank of the Yamuna river.Visit early in the morning to avoid crowds. Don't forget to take your camera for amazing shots.",
+    image: '/images/Taj-Mahal-Agra.jpg',
   },
   {
-    id: 'p2',
-    place: 'Goa',
-    thoughts: 'Known for its beautiful beaches and vibrant nightlife.',
-    photos: [
-      'https://www.holidify.com/images/cmsuploads/compressed/Goa_beaches_20190613234210.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/Goa_beaches_20190613234210.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/Goa_beaches_20190613234210.jpg',
-    ],
-    tips: 'Visit during November to February to enjoy the best weather.',
+    userId: 1,
+    destinationId: 2,
+    title: 'Goa',
+    content:
+      'Known for its beautiful beaches and vibrant nightlife. Visit during November to February to enjoy the best weather.',
+    image: '/images/goa.jpg',
   },
   {
-    id: 'p3',
-    place: 'Jaipur, Rajasthan',
-    thoughts: 'Known as the Pink City, Jaipur is famous for its distinct color of buildings and its vibrant culture',
-    photos: [
-      'https://www.holidify.com/images/cmsuploads/compressed/amer-fort-jaipur-rajasthan-india-cover_20190613234315.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/amer-fort-jaipur-rajasthan-india-cover_20190613234315.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/amer-fort-jaipur-rajasthan-india-cover_20190613234315.jpg',
-    ],
-    tips: 'Explore the local markets for a taste of the local culture and cuisine.',
+    userId: 1,
+    destinationId: 3,
+    title: 'Jaipur, Rajasthan',
+    content:
+      'Known as the Pink City, Jaipur is famous for its distinct color of buildings and its vibrant culture. Explore the local markets for a taste of the local culture and cuisine.',
+    image: '/images/Jaipur-Rajasthan.jpg',
   },
   {
-    id: 'p4',
-    place: 'Kerala Backwaters',
-    thoughts: 'A network of tranquil canals and lagoons, perfect for a peaceful getaway.',
-    photos: [
-      'https://www.holidify.com/images/cmsuploads/compressed/alleppey-backwaters_20190613234437.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/alleppey-backwaters_20190613234437.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/alleppey-backwaters_20190613234437.jpg',
-    ],
-    tips: 'Stay in a houseboat for a unique experience.',
+    userId: 1,
+    destinationId: 4,
+    title: 'Kerala Backwaters',
+    content:
+      'A network of tranquil canals and lagoons, perfect for a peaceful getaway.Stay in a houseboat for a unique experience.',
+    image: '/images/Kerala-Backwaters.jpg',
   },
   {
-    id: 'p5',
-    place: 'Darjeeling, West Bengal',
-    thoughts:
-      'A beautiful hill station known for its tea gardens and the view of Kangchenjunga, the worlds third-highest mountain.',
-    photos: [
-      'https://www.holidify.com/images/cmsuploads/compressed/darjeeling-1807_20190613234547.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/darjeeling-1807_20190613234547.jpg',
-      'https://www.holidify.com/images/cmsuploads/compressed/darjeeling-1807_20190613234547.jpg',
-    ],
-    tips: 'Take a ride on the Darjeeling Himalayan Railway, a UNESCO World Heritage site.',
+    userId: 1,
+    destinationId: 5,
+    title: 'Darjeeling, West Bengal',
+    content:
+      'A beautiful hill station known for its tea gardens and the view of Kangchenjunga, the worlds third-highest mountain.Take a ride on the Darjeeling Himalayan Railway, a UNESCO World Heritage site.',
+    image: '/images/Darjeeling-West Bengal.jpg',
   },
 ];
 

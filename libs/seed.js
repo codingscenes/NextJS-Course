@@ -43,6 +43,48 @@ async function main() {
       tips: 'Take a ride on the Darjeeling Himalayan Railway, a UNESCO World Heritage site.',
     },
   ];
+  const posts = [
+    {
+      userId: 1,
+      destinationId: 1,
+      title: 'Taj Mahal, Agra',
+      content:
+        "An ivory-white marble mausoleum on the right bank of the Yamuna river.Visit early in the morning to avoid crowds. Don't forget to take your camera for amazing shots.",
+      image: '/images/Taj-Mahal-Agra.jpg',
+    },
+    {
+      userId: 1,
+      destinationId: 2,
+      title: 'Goa',
+      content:
+        'Known for its beautiful beaches and vibrant nightlife. Visit during November to February to enjoy the best weather.',
+      image: '/images/goa.jpg',
+    },
+    {
+      userId: 1,
+      destinationId: 3,
+      title: 'Jaipur, Rajasthan',
+      content:
+        'Known as the Pink City, Jaipur is famous for its distinct color of buildings and its vibrant culture. Explore the local markets for a taste of the local culture and cuisine.',
+      image: '/images/Jaipur-Rajasthan.jpg',
+    },
+    {
+      userId: 1,
+      destinationId: 4,
+      title: 'Kerala Backwaters',
+      content:
+        'A network of tranquil canals and lagoons, perfect for a peaceful getaway.Stay in a houseboat for a unique experience.',
+      image: '/images/Kerala-Backwaters.jpg',
+    },
+    {
+      userId: 1,
+      destinationId: 5,
+      title: 'Darjeeling, West Bengal',
+      content:
+        'A beautiful hill station known for its tea gardens and the view of Kangchenjunga, the worlds third-highest mountain.Take a ride on the Darjeeling Himalayan Railway, a UNESCO World Heritage site.',
+      image: '/images/Darjeeling-West Bengal.jpg',
+    },
+  ];
 
   // for (let user of users) {
   //   await prisma.user.create({
@@ -54,12 +96,19 @@ async function main() {
   //     data: place,
   //   });
   // }
+  for (let post of posts) {
+    await prisma.post.create({
+      data: post,
+    });
+  }
 
   const allUsers = await prisma.user.findMany();
   const allDestination = await prisma.destination.findMany();
+  const allposts = await prisma.post.findMany();
 
   console.log(allUsers);
   console.log(allDestination);
+  console.log(allposts);
 }
 
 main()

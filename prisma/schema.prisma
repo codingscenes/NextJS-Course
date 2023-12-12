@@ -30,6 +30,7 @@ model Post {
   id            Int         @id @default(autoincrement())
   title         String
   content       String
+  image         String
   userId        Int
   destinationId Int
   user          User        @relation(fields: [userId], references: [id])
