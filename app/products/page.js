@@ -1,4 +1,4 @@
-import ProductItem from '@/components/product-item';
+import ProductItem from '@/components/products/product-item';
 import { getAllProducts } from '@/libs/products';
 import { Suspense } from 'react';
 

@@ -1,0 +1,45 @@
+.controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  display: none;
+}
+
+.button {
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  background: #9fa6b6;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button:hover,
+.button:focus {
+  background: #b4bac5;
+}
+
+.preview {
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid #a5adbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #a4abb9;
+  position: relative;
+}
+
+.preview p {
+  margin: 0;
+  padding: 1rem;
+}
+
+.preview img {
+  object-fit: cover;
+}
