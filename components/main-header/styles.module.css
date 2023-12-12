@@ -1,0 +1,9 @@
+.brandName {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+}
+.logo {
+  width: 20px;
+  margin-right: 0.3rem;
+}
