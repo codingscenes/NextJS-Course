@@ -24,8 +24,8 @@ model Product {
   name        String
   description String
   price       Float
-  imageUrl    String
-  sellerId Int
+  imageUrl       String
+  sellerId    Int
   user        User     @relation(fields: [sellerId], references: [id])
   createdAt   DateTime @default(now())
 }
