@@ -7,7 +7,10 @@ import { saveProduct } from './products';
 function isInvalidText(text) {
   return !text || text.trim() === '';
 }
-export async function publishProduct(formData) {
+// now the formData will be the second argument
+// first arg will be the default state or the previous server action response
+// which we in any case we do not use it
+export async function publishProduct(previousState, formData) {
   const product = {
     name: formData.get('name'),
     description: formData.get('description'),
@@ -28,7 +31,11 @@ export async function publishProduct(formData) {
     !product.image ||
     product.image.size === 0
   ) {
-    throw new Error('Invalid input received!');
+    // throw new Error('Invalid input received!');
+    return {
+      // it should be serialize object that means no method as it will be any way lost
+      message: 'Invalid Input',
+    };
   }
 
   await saveProduct(product);
