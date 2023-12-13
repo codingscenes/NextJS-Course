@@ -1,8 +1,8 @@
 import ImagePicker from '@/components/products/image-picker';
+import ProductFormSubmit from '@/components/products/product-form-submit';
 import { publishProduct } from '@/libs/actions';
 import classNames from 'classnames';
 import styles from './page.module.css';
-
 /**
  * This is how we add server functions
  * There is also another way
@@ -28,6 +28,9 @@ export default function SellPage() {
   //   };
   //   console.log(product);
   // }
+
+  // const status = useFormStatus(); it will not work here any ways as this will only give status of the form(any ongoing request) if it is inside the form. as any it should be a client compoennt and it is not a good idea to transform the entire component to client compoent just for getting status of on-going request of this form.
+
   return (
     <div className='container mb-4'>
       <div className='row mx-auto justify-content-center'>
@@ -74,9 +77,7 @@ export default function SellPage() {
               />
             </div>
             <ImagePicker label='IMAGE' name='image' />
-            <button type='submit' className='btn btn-dark mt-4'>
-              PUBLISH
-            </button>
+            <ProductFormSubmit />
           </form>
         </div>
       </div>
