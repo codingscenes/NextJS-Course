@@ -39,5 +39,8 @@ export async function publishProduct(previousState, formData) {
   }
 
   await saveProduct(product);
+  // it will revalidate the path but not the nested path(siblings) untill you pass the 2nd arg
+  // revalidatePath('/products) // to avoid agressive catching
+  // revalidatePath('/products', 'page || layout');
   redirect('/products');
 }

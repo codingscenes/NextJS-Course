@@ -46,10 +46,17 @@ import { Suspense } from 'react';
 // ];
 
 // out sourced the data fetching part
+
+export const metadata = {
+  title: 'All Products ~ Wide range of laptops for sale',
+  description: 'All the products are working out of the box.',
+};
+
 async function Products() {
   const products = await getAllProducts();
   return products.map((product) => <ProductItem product={product} key={product.id} />);
 }
+
 export default function ProductsPage() {
   return (
     <div className='container mt-4'>

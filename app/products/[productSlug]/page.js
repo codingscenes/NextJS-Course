@@ -20,6 +20,18 @@ const product = {
   sellerEmail: 'xyz@abc.com',
   createdAt: '1702389895598',
 };
+
+// NextJS always looks for function like below
+export async function generateMetadata({ params }) {
+  const product = await getProductBySlug(params.productSlug);
+  if (!product) {
+    notFound();
+  }
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
 export default async function ProductDetailPage({ params }) {
   // console.log(params.productSlug);
   const product = await getProductBySlug(params?.productSlug);
