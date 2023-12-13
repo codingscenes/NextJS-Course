@@ -1,20 +1,33 @@
 import ImagePicker from '@/components/products/image-picker';
+import { publishProduct } from '@/libs/actions';
 import classNames from 'classnames';
 import styles from './page.module.css';
 
+/**
+ * This is how we add server functions
+ * There is also another way
+ * We can add server function to a component which is not a client side
+ * eg 'use client' component can not have this server function as it
+ * will throw errors
+ * so if you outsource this server function to another file where you used
+ * 'use server';
+ * then here we can export that function and we can use it. now we can also mark this component as client component using 'use client' and
+ * it will not throw any error and will work smoothly
+ *
+ */
 export default function SellPage() {
-  async function publishProduct(formData) {
-    'use server'; //This will create server action and is gauranted that this function will only execute on the server. so here we mark it that it will execute on server not on client and it is a server action.
-    // FormData() // js class to handle submitted data
-    const product = {
-      name: formData.get('name'),
-      description: formData.get('description'),
-      price: formData.get('price'),
-      imageUrl: formData.get('image'), //should be stored on filesystem and only url should be stored in imageUrl db
-      sellerId: 1, // should be logged in user id
-    };
-    console.log(product);
-  }
+  // async function publishProduct(formData) {
+  //   'use server'; //This will create server action and is gauranted that this function will only execute on the server. so here we mark it that it will execute on server not on client and it is a server action.
+  //   // FormData() // js class to handle submitted data
+  //   const product = {
+  //     name: formData.get('name'),
+  //     description: formData.get('description'),
+  //     price: formData.get('price'),
+  //     imageUrl: formData.get('image'), //should be stored on filesystem and only url should be stored in imageUrl db
+  //     sellerId: 1, // should be logged in user id
+  //   };
+  //   console.log(product);
+  // }
   return (
     <div className='container mb-4'>
       <div className='row mx-auto justify-content-center'>
