@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import styles from './image-picker.module.css';
+
 export default function ImagePicker({ label, name }) {
   const [pickedImage, setPickedImage] = useState();
   const imageInputRef = useRef();
@@ -25,10 +26,10 @@ export default function ImagePicker({ label, name }) {
   }
   return (
     <div className='form-group mt-4'>
-      <label htmlFor={name} className={styles.label}>
-        {label}
-      </label>
       <div className={styles.controls}>
+        <button className={styles.button} type='button' onClick={handleImageClick}>
+          Pick an Image
+        </button>
         <div className={styles.preview}>
           {!pickedImage && <p className='text-muted'>No image picked yet.</p>}
           {pickedImage && <Image src={pickedImage} alt='Preview' className={styles.image} fill />}
@@ -45,9 +46,6 @@ export default function ImagePicker({ label, name }) {
           // multiple={false}
           required
         />
-        <button className={styles.button} type='button' onClick={handleImageClick}>
-          Pick an Image
-        </button>
       </div>
     </div>
   );

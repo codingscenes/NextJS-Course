@@ -1,9 +1,10 @@
 import ImagePicker from '@/components/products/image-picker';
+import classNames from 'classnames';
 import styles from './page.module.css';
 
 export default function SellPage() {
   return (
-    <div className='container'>
+    <div className='container mb-4'>
       <div className='row mx-auto justify-content-center'>
         <div className='col-md-8'>
           <h1 className='fancy mt-4'>Sell your product</h1>
@@ -26,7 +27,7 @@ export default function SellPage() {
               <textarea
                 className='form-control bg-dark text-white'
                 id='description'
-                rows='6'
+                rows='4'
                 placeholder='Enter product description'
               ></textarea>
             </div>
@@ -36,14 +37,14 @@ export default function SellPage() {
               </label>
               <input
                 type='number'
-                className='form-control bg-dark text-white'
+                className={classNames('form-control bg-dark text-white', styles.price)}
                 id='price'
                 placeholder='Enter product price'
               />
             </div>
             <ImagePicker label='IMAGE' name='image' />
             <button type='submit' className='btn btn-dark mt-4'>
-              Submit
+              PUBLISH
             </button>
           </form>
         </div>

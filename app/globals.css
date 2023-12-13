@@ -24,3 +24,7 @@ body {
 .fancy {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
+
+label {
+  margin-bottom: 0.2rem;
+}
